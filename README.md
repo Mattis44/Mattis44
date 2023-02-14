@@ -13,17 +13,26 @@
   </a>
 </div>
   
-  <div align="center">
+  
   
   ---
   
   ### :milky_way: About me
   
-  I am a learning developper from France <img src="https://media.giphy.com/media/jBDkwmIgmihgc/giphy.gif" width="30">
-  
-  :telescope: I’m a student at La Joliverie in Nantes.
-  
   </div>
+  
+  ```js
+    
+    const Mattis = async () => {
+          desc: "A learning developper from France.",
+          prof: "Im a student at La Joliverie in Nantes.",
+          school: true,
+          discord: {uname: "Mattis.#0001"},
+    }
+
+```
+  
+  <div align='center'>
   
   ---
 
