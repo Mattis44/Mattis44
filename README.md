@@ -25,7 +25,7 @@
     
     const Mattis = async (props) => {  
         const [name, setName] = useState("Mattis")
-        const age = useRef(null)
+        const ageRef = useRef(null)
         const student = props.student ? props.student || true : false
         const [location, setLocation] = useState('')
         const discord = "mattis."
