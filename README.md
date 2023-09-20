@@ -21,13 +21,26 @@
   
   </div>
   
-  ```js
+  ```jsx
     
-    const Mattis = async () => {
-          desc: "A learning developper from France.",
-          prof: "Im a student at La Joliverie in Nantes.",
-          school: true,
-          discord: {uname: "Mattis.#0001"},
+    const Mattis = async (props) => {  
+        const [name, setName] = useState("Mattis")
+        const age = useRef(null)
+        const student = props.student ? props.student || true : false
+        const [location, setLocation] = useState('')
+        const discord = "mattis."
+
+        useEffect(() => {
+          const getLoc = () => {
+            axios.get('/api/location')
+                .then((res) => setLocation(res.data || "Nantes"))
+          }
+        getLoc()
+        }, [location])
+
+        return (
+        <input type=text ref={ageRef} value='20'/>
+      )
     }
 
 ```
