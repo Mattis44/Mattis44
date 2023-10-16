@@ -36,7 +36,7 @@
                 .then((res) => setLocation(res.data || "Nantes"))
           }
         getLoc()
-        }, [location])
+        }, [])
 
         return (
         <input type=text ref={ageRef} value='20'/>
