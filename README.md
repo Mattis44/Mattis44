@@ -25,15 +25,17 @@
     
     const Mattis = async (props) => {  
         const [name, setName] = useState("Mattis")
-        const ageRef = useRef(null)
-        const student = props.student ? props.student || true : false
         const [location, setLocation] = useState('')
+
+        const ageRef = useRef(null)
+
+        const student = props.student || false;        
         const discord = "mattis."
 
         useEffect(() => {
           const getLoc = () => {
             axios.get('/api/location')
-                .then((res) => setLocation(res.data || "Nantes"))
+                .then((res) => setLocation(res.data?.location ?? "Nantes"))
           }
         getLoc()
         }, [])
