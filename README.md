@@ -8,9 +8,6 @@
   <a href="https://www.linkedin.com/in/mattis-naud-692836226/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="https://twitter.com/maatttissss">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
 </div>
   
   
@@ -41,7 +38,7 @@
         }, [])
 
         return (
-        <input type=text ref={ageRef} value='20'/>
+        <input type=text ref={ageRef} value='21'/>
       )
     }
 
