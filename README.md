@@ -1,6 +1,8 @@
 <h1 id="header" align="center"> <strong> Mattis </strong> </h1>
 <br/>
 
+I’m a Full-Stack developer passionate about crafting clear, accessible and thoughtful interfaces — from sleek front-end design to efficient backend architecture. I enjoy building tools that make developers’ lives easier, blending performance, UX and clean code. Currently focusing on React ecosystems, open-source libraries, and developer experience (DX).
+
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" width="100"/>
   
