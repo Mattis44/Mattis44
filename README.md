@@ -27,7 +27,7 @@ I’m a Full-Stack developer passionate about crafting clear, accessible and tho
         const [name, setName] = useState("Mattis")
         const [location, setLocation] = useState('')
 
-        const ageRef = useRef(null)
+        const ageRef = useRef<number | null>(null)
 
         const student = props.student || false;        
         const discord = "mattis."
@@ -41,7 +41,7 @@ I’m a Full-Stack developer passionate about crafting clear, accessible and tho
         }, [])
 
         return (
-        <input type=text ref={ageRef} value='21'/>
+        <input type=number ref={ageRef} value='22'/>
       )
     }
 
