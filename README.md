@@ -24,8 +24,8 @@ I’m a Full-Stack developer passionate about crafting clear, accessible and tho
   ```jsx
     
     const Mattis = async (props) => {  
-        const [name, setName] = useState("Mattis")
-        const [location, setLocation] = useState('')
+        const [name, setName] = useState<string>("Mattis")
+        const [location, setLocation] = useState<string>('')
 
         const ageRef = useRef<number | null>(null)
 
@@ -41,7 +41,7 @@ I’m a Full-Stack developer passionate about crafting clear, accessible and tho
         }, [])
 
         return (
-        <input type=number ref={ageRef} value='22'/>
+        <input type=number ref={ageRef} value={22} />
       )
     }
 
