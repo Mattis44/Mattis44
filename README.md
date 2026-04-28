@@ -22,28 +22,29 @@ I’m a Full-Stack developer passionate about crafting clear, accessible and tho
   </div>
   
   ```jsx
-    
-    const Mattis = async (props) => {  
-        const [name, setName] = useState<string>("Mattis")
-        const [location, setLocation] = useState<string>('')
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+import { useState, useRef } from 'react'
 
-        const ageRef = useRef<number | null>(null)
+const Mattis = (props) => {
+  const [name, setName] = useState<string>("Mattis")
+  const ageRef = useRef<number | null>(null)
 
-        const student = props.student || false;        
-        const discord = "mattis."
+  const student = props.student || false
+  const discord = "mattis."
 
-        useEffect(() => {
-          const getLoc = () => {
-            axios.get('/api/location')
-                .then((res) => setLocation(res.data?.location ?? "Nantes"))
-          }
-        getLoc()
-        }, [])
-
-        return (
-        <input type=number ref={ageRef} value={22} />
-      )
+  const { data: location = "Nantes" } = useQuery({
+    queryKey: ['location'],
+    queryFn: async () => {
+      const res = await axios.get('/api/location')
+      return res.data?.location ?? "Nantes"
     }
+  })
+
+  return (
+    <input type="number" ref={ageRef} value={22} />
+  )
+}
 
 ```
   
